@@ -15,6 +15,12 @@ public class FrameLock : MonoBehaviour
     private void Start()
     {
         _interactors = GetComponentsInChildren<XRSocketInteractor>();
+
+        if (_interactors.Length != _lockCode.Length)
+        {
+            Debug.LogError($"Solution code has {_lockCode.Length} entries." +
+                " There are {_interactors.Length} interactors.");
+        }
     }
 
     public void EnterSocket0()
@@ -60,6 +66,7 @@ public class FrameLock : MonoBehaviour
         {
             for(int i = 0;  i < _enteredCode.Length; i++)
             {
+                Debug.Log($"{_enteredCode[i]} - {_lockCode[i]}");
                 if (_enteredCode[i] != _lockCode[i])
                     return false;
             }
