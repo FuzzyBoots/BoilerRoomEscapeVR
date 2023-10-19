@@ -30,8 +30,7 @@ public class LockScript : MonoBehaviour
             Debug.LogError("null selected item");
 
         GameObject obj = interactable.transform.gameObject;
-        Debug.Log(obj.name);
-
+        
         obj?.SetActive(false);
     }
 }

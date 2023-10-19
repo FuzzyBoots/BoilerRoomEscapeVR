@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8625776998298370509}
   - component: {fileID: 3379315144723731854}
   - component: {fileID: 1291619286893242940}
-  - component: {fileID: 8061380609134647779}
+  - component: {fileID: 6433686944908212265}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8061380609134647779}
+      - m_Target: {fileID: 6433686944908212265}
         m_TargetAssemblyTypeName: LockScript, Assembly-CSharp
         m_MethodName: DisableInsertedItem
         m_Mode: 1
@@ -223,7 +223,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.06404715
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8061380609134647779
+--- !u!114 &6433686944908212265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,6 +232,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6206487110258730022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76626b7708b763847a76f5f8e1a6b8d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d38568c6c3d0294e98c8a1aadee8193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
