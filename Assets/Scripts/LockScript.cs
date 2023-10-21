@@ -31,6 +31,6 @@ public class LockScript : MonoBehaviour
 
         GameObject obj = interactable.transform.gameObject;
         
-        obj?.SetActive(false);
+        obj?.SetActive(false);     
     }
 }

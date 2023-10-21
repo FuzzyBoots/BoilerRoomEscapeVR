@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Content.Interaction;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(AudioSource))]
 public class Shatter : MonoBehaviour
@@ -12,6 +15,8 @@ public class Shatter : MonoBehaviour
     Animator _doorAnimator;
 
     [SerializeField]
+    XROrigin _XROrigin;
+
     AudioSource _audioSource;
 
     // Start is called before the first frame update
@@ -47,6 +52,8 @@ public class Shatter : MonoBehaviour
                 Destroy(gameObject);
 
                 _audioSource.Play();
+
+                _doorAnimator.SetTrigger("OpenDoor");
             }
             else
             {
@@ -54,7 +61,5 @@ public class Shatter : MonoBehaviour
                 // Give hint?
             }
         }
-
-        _doorAnimator.SetTrigger("OpenDoor");
     }
 }
