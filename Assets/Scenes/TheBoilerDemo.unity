@@ -26112,7 +26112,7 @@ MonoBehaviour:
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3203323152838509186}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HideAfterDelay, Assembly-CSharp
         m_MethodName: HideThisAfterDelay
         m_Mode: 1
@@ -51344,7 +51344,7 @@ MonoBehaviour:
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6608117596396474675}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HideAfterDelay, Assembly-CSharp
         m_MethodName: HideThisAfterDelay
         m_Mode: 1
