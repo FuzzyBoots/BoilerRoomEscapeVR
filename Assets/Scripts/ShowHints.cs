@@ -11,19 +11,7 @@ public class ShowHints : MonoBehaviour
     [SerializeField] private int _hintIndex = 0;
 
     private bool _displayingHint = false;
-    [SerializeField] private float _delayTime = 4f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-            
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float _delayTime = 2f;
 
     public void  ShowNextHint()
     {

@@ -19,7 +19,7 @@ public class FrameLock : MonoBehaviour
         if (_interactors.Length != _lockCode.Length)
         {
             Debug.LogError($"Solution code has {_lockCode.Length} entries." +
-                " There are {_interactors.Length} interactors.");
+                $" There are {_interactors.Length} interactors.");
         }
     }
 
