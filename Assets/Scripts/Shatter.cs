@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.XR.Content.Interaction;
 using UnityEngine.XR.Interaction.Toolkit;
 
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(AudioSource), typeof(MeshCollider), typeof(MeshRenderer))]
 public class Shatter : MonoBehaviour
 {
     [SerializeField]
@@ -27,13 +27,9 @@ public class Shatter : MonoBehaviour
             Debug.LogError("No door animator is set on the chains");
         }
 
-        _audioSource= GetComponent<AudioSource>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        _audioSource= GetComponent<AudioSource>();
     }
 
     public void LockRemoved()
@@ -49,7 +45,9 @@ public class Shatter : MonoBehaviour
         {
             if (_locks <= 0)
             {
-                Destroy(gameObject);
+                gameObject.GetComponent<MeshCollider>().enabled = false;
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                Destroy(gameObject, 5f);
 
                 _audioSource.Play();
 

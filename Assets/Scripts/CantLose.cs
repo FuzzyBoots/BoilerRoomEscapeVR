@@ -22,6 +22,18 @@ public class CantLose : MonoBehaviour
         _returnTimer = new WaitForSeconds(_returnTime);
     }
 
+    IEnumerator CheckOutOfBounds()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(_returnTime);
+            if (transform.position.y < -10)
+            {
+                Return();
+            }
+        }
+    }
+
     public void Return()
     {
         StartCoroutine(ReturnRoutine());
