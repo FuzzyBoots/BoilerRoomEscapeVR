@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
+using System;
 
 public class FrameLock : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class FrameLock : MonoBehaviour
     int[] _enteredCode = { 0, 0, 0 };
 
     private XRSocketInteractor[] _interactors;
-    [SerializeField] UnityEvent _onCheck;
+    [SerializeField] UnityEvent _onCheck; 
 
     private void Start()
     {
